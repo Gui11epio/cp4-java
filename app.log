@@ -1,0 +1,18 @@
+2024-08-31 18:13:07 [main] WARN  org.example.Main - Artista cadastrado com dados inválidos 
+2024-08-31 18:30:38 [main] INFO  org.example.Log.Loggable - Artista Cadastrado: [] 
+2024-08-31 18:30:38 [main] INFO  org.example.Main - Artista Cadastrado com sucesso 
+2024-08-31 18:32:30 [main] INFO  org.example.Log.Loggable - Artista Cadastrado: [] 
+2024-08-31 18:47:17 [main] INFO  org.example.Log.Loggable - Artista Cadastrado com sucesso 
+2024-08-31 18:59:02 [main] INFO  org.example.Log.Loggable - Artista Cadastrado com sucesso 
+2024-08-31 18:59:14 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-08-31 18:59:37 [main] INFO  org.example.Log.Loggable - Música Cadastrada com sucesso 
+2024-08-31 19:20:33 [main] INFO  org.example.Log.Loggable - Artista Cadastrado com sucesso 
+2024-08-31 19:20:48 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-08-31 19:21:00 [main] INFO  org.example.Log.Loggable - Música Cadastrada com sucesso 
+2024-08-31 19:25:01 [main] INFO  org.example.Log.Loggable - Artista Cadastrado com sucesso 
+2024-08-31 19:25:12 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-08-31 19:25:22 [main] INFO  org.example.Log.Loggable - Música Cadastrada com sucesso 
+2024-08-31 19:29:53 [main] INFO  org.example.Log.Loggable - Artista Cadastrado com sucesso 
+2024-08-31 19:33:45 [main] INFO  org.example.Log.Loggable - Artista Cadastrado com sucesso 
+2024-08-31 19:34:09 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-08-31 19:34:45 [main] INFO  org.example.Log.Loggable - Música Cadastrada com sucesso 
