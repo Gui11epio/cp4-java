@@ -38,3 +38,10 @@
 2024-09-01 20:25:08 [main] INFO  org.example.Log.Loggable - Artista Cadastrado com sucesso 
 2024-09-01 20:25:21 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
 2024-09-01 20:25:33 [main] INFO  org.example.Log.Loggable - Artista excluido com sucesso 
+2024-09-01 21:51:35 [main] INFO  org.example.Log.Loggable - Artista cadastrado com sucesso 
+2024-09-01 21:53:07 [main] INFO  org.example.Log.Loggable - Artista cadastrado com sucesso 
+2024-09-01 21:53:16 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-09-01 21:53:27 [main] INFO  org.example.Log.Loggable - Música Cadastrada com sucesso 
+2024-09-01 21:54:14 [main] INFO  org.example.Log.Loggable - Música excluida com sucesso 
+2024-09-01 21:57:14 [main] INFO  org.example.Log.Loggable - Artista cadastrado com sucesso 
+2024-09-01 21:57:24 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 

@@ -34,7 +34,7 @@ public class RepositorioMusica implements RepositorioGenerico<Musica>, Loggable<
             atual.setTitulo(musica.getTitulo());
             atual.setDuracao(musica.getDuracao());
             atual.setAlbum(musica.getAlbum());
-            logInfo("Artista atualizado com sucesso");
+            logInfo("Música atualizada com sucesso");
         }
 
     }

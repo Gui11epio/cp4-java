@@ -230,10 +230,11 @@ public class Main {
                                     for(Artista artista1: artistas){
                                         System.out.println("\n- ID: " + artista1.getId()
                                                 + "\n- Nome: " + artista1.getNome());
-                                        break;
+
                                     }
+                                    break;
                                 }
-                                System.out.println("\t");
+
 
 
                             case 2:
@@ -250,10 +251,11 @@ public class Main {
                                     for (Album album1 : albums){
                                         System.out.println("\n- ID: " + album1.getId()
                                                 + "\n- Título: " + album1.getTitulo());
-                                        break;
+
                                     }
+                                    break;
                                 }
-                                System.out.println("\t");
+
 
                             case 0:
                                 break;

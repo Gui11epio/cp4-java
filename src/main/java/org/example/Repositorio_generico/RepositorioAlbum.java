@@ -43,7 +43,7 @@ public class RepositorioAlbum implements RepositorioGenerico<Album>, Loggable<Al
         Album album = buscarPorId(id);
         if(album != null){
             albums.remove(album);
-            logInfo("Música excluida com sucesso");
+            logInfo("Álbum excluido com sucesso");
         }
 
     }
