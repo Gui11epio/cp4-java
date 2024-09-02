@@ -35,5 +35,7 @@ public class Musica extends _EntidadeBase {
         this.album = album;
     }
 
-
+    public String toString() {
+        return this.titulo;
+    }
 }

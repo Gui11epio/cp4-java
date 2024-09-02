@@ -45,3 +45,17 @@
 2024-09-01 21:54:14 [main] INFO  org.example.Log.Loggable - Música excluida com sucesso 
 2024-09-01 21:57:14 [main] INFO  org.example.Log.Loggable - Artista cadastrado com sucesso 
 2024-09-01 21:57:24 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-09-02 13:27:39 [main] INFO  org.example.Main - Artista não foi encontrado 
+2024-09-02 14:47:23 [main] INFO  org.example.Log.Loggable - Artista cadastrado com sucesso 
+2024-09-02 14:47:34 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-09-02 14:47:43 [main] INFO  org.example.Log.Loggable - Música Cadastrada com sucesso 
+2024-09-02 14:48:51 [main] INFO  org.example.Log.Loggable - Música excluida com sucesso 
+2024-09-02 14:49:27 [main] INFO  org.example.Log.Loggable - Álbum atualizado com sucesso 
+2024-09-02 14:52:14 [main] INFO  org.example.Log.Loggable - Artista cadastrado com sucesso 
+2024-09-02 14:52:23 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-09-02 14:53:55 [main] INFO  org.example.Log.Loggable - Artista cadastrado com sucesso 
+2024-09-02 14:54:06 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-09-02 14:54:17 [main] INFO  org.example.Log.Loggable - Música Cadastrada com sucesso 
+2024-09-02 14:56:11 [main] INFO  org.example.Log.Loggable - Artista cadastrado com sucesso 
+2024-09-02 14:56:27 [main] INFO  org.example.Log.Loggable - Album cadastrado com sucesso 
+2024-09-02 14:56:40 [main] INFO  org.example.Log.Loggable - Música Cadastrada com sucesso 

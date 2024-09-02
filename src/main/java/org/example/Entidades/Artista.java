@@ -41,6 +41,8 @@ public class Artista extends _EntidadeBase{
         albums.add(album);
     }
 
-
-
+    @Override
+    public String toString() {
+        return this.nome;
+    }
 }

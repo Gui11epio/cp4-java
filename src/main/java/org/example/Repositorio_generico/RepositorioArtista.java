@@ -34,6 +34,8 @@ public class RepositorioArtista implements RepositorioGenerico<Artista>, Loggabl
             atual.setNome(artista.getNome());
             atual.setGeneroMusical(artista.getGeneroMusical());
             logInfo("Artista atualizado com sucesso");
+        }else{
+            logInfo("Artista não encontrado");
         }
 
 

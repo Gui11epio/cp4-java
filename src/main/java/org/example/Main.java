@@ -168,6 +168,7 @@ public class Main {
                                     System.out.println("\n- ID: " + artista1.getId()
                                             + "\n- Nome: " + artista1.getNome()
                                             + "\n- Gênero Musical: " + artista1.getGeneroMusical());
+                                System.out.println("\t");
                                 break;
 
 
@@ -178,6 +179,7 @@ public class Main {
                                             + "\n- Título: " + album1.getTitulo()
                                             + "\n- Ano de Lançamento: " + album1.getAnoLancamento()
                                             + "\n- Artista: " + album1.getArtista());
+                                System.out.println("\t");
                                 break;
 
 
@@ -189,6 +191,7 @@ public class Main {
                                             + "\n- Título: " + musica.getTitulo()
                                             + "\n- Duração: " + musica.getDuracao() + " minutos"
                                             + "\n- Álbum: " + musica.getAlbum());
+                                System.out.println("\t");
                                 break;
 
 
@@ -328,7 +331,26 @@ public class Main {
 
 
                             case 3:
-                                System.out.println();
+                                for(Musica musica1 : repositorioMusica.exibir())
+                                    System.out.println("\n- ID: " + musica1.getId()
+                                            + "\n- Título: " + musica1.getTitulo()
+                                            + "\n- Duração: " + musica1.getDuracao()
+                                            + "\n- Álbum: " + musica1.getAlbum());
+                                System.out.println("\t");
+
+                                System.out.println("ID da Música que deseja excluir: ");
+                                int idMusica = scanner.nextInt();
+                                scanner.nextLine();
+
+                                Musica musica = repositorioMusica.buscarPorId(idMusica);
+                                if(musica != null){
+                                    repositorioMusica.excluir(musica.getId());
+                                    break;
+                                }else{
+                                    System.out.println("Nenhuma Música encontrada");
+                                    break;
+                                }
+
                             case 0:
                                 break;
 
@@ -342,6 +364,120 @@ public class Main {
                     break;
 
                 case 5:
+                    while(true){
+                        System.out.println("==== ATUALIZAR ====");
+                        System.out.println("\t");
+                        System.out.println("\t1 - Atualizar Artista");
+                        System.out.println("\t2 - Atualizar Álbum");
+                        System.out.println("\t3 - Atualizar Música");
+                        System.out.println("\t0 - Voltar");
+
+                        int escolhaAtl = scanner.nextInt();
+                        scanner.nextLine();
+
+                        switch (escolhaAtl){
+                            case 1:
+                                System.out.println("==== ATUALIZAR ARTISTA ====");
+                                for(Artista artista1 : repositorioArtista.exibir())
+                                    System.out.println("\n- ID: " + artista1.getId()
+                                            + "\n- Nome: " + artista1.getNome()
+                                            + "\n- Gênero Musical: " + artista1.getGeneroMusical());
+                                System.out.println("\t");
+
+                                System.out.println("ID do Artista que deseja editar: ");
+                                int idArtista = scanner.nextInt();
+                                scanner.nextLine();
+
+                                Artista artista = repositorioArtista.buscarPorId(idArtista);
+                                if(artista != null){
+                                    System.out.println("Novo nome: ");
+                                    String novoNome = scanner.nextLine();
+                                    System.out.println("Novo gênero Musical: ");
+                                    String novoGenero = scanner.nextLine();
+
+                                    artista.setNome(novoNome);
+                                    artista.setGeneroMusical(novoGenero);
+
+                                    repositorioArtista.editar(artista);
+                                    break;
+                                }else {
+                                    logger.info("Artista não foi encontrado");
+                                    break;
+                                }
+
+                            case 2:
+                                System.out.println("==== ATUALIZAR ÁLBUM ====");
+                                for(Album album1 : repositorioAlbum.exibir())
+                                    System.out.println("\n- ID: " + album1.getId()
+                                            + "\n- Título: " + album1.getTitulo()
+                                            + "\n- Ano de Lançamento: " + album1.getAnoLancamento()
+                                            + "\n- Artista: " + album1.getArtista());
+                                System.out.println("\t");
+
+                                System.out.println("ID do Álbum que deseja editar: ");
+                                int idAlbum = scanner.nextInt();
+                                scanner.nextLine();
+
+                                Album album = repositorioAlbum.buscarPorId(idAlbum);
+                                if(album != null){
+                                    System.out.println("Novo Título: ");
+                                    String novoTitulo = scanner.nextLine();
+                                    System.out.println("Novo ano de lançamento: ");
+                                    int novoAno = scanner.nextInt();
+
+                                    album.setTitulo(novoTitulo);
+                                    album.setAnoLancamento(novoAno);
+
+                                    repositorioAlbum.editar(album);
+                                    break;
+                                }else {
+                                    logger.info("Álbum não encontrado");
+                                    break;
+                                }
+                            case 3:
+                                System.out.println("==== ATUALIZAR MÚSICA ====");
+                                for(Musica musica1 : repositorioMusica.exibir())
+                                    System.out.println("\n- ID: " + musica1.getId()
+                                            + "\n- Título: " + musica1.getTitulo()
+                                            + "\n- Duração: " + musica1.getDuracao()
+                                            + "\n- Álbum: " + musica1.getAlbum());
+                                System.out.println("\t");
+
+                                System.out.println("ID da Música que deseja excluir: ");
+                                int idMusica = scanner.nextInt();
+                                scanner.nextLine();
+
+                                Musica musica = repositorioMusica.buscarPorId(idMusica);
+                                if(musica != null){
+                                    System.out.println("Novo título: ");
+                                    String novoTitulo = scanner.nextLine();
+                                    System.out.println("Nova Duração: ");
+                                    int novaDuracao = scanner.nextInt();
+                                    scanner.nextLine();
+
+                                    musica.setTitulo(novoTitulo);
+                                    musica.setDuracao(novaDuracao);
+
+                                    repositorioMusica.editar(musica);
+                                    break;
+                                }else{
+                                    System.out.println("Nenhuma Música encontrada");
+                                    break;
+                                }
+
+                            case 0:
+                                break;
+
+                            default:
+                                System.out.println("Opção Inválida. Tente Novamente");
+                        }
+                        if(escolhaAtl == 0){
+                            break;
+                        }
+                    }
+                    break;
+
+
 
 
 

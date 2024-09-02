@@ -52,7 +52,9 @@ public class Album extends _EntidadeBase{
         musicas.add(musica);
     }
 
-
+    public String toString() {
+        return this.titulo;
+    }
 
 
 }

@@ -10,7 +10,4 @@ public interface Loggable <T>{
         LOGGER.info(mensagem);
     }
 
-    default void logErro(T mensagem){
-        LOGGER.error(mensagem);
-    }
 }
