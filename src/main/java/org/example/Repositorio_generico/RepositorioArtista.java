@@ -17,7 +17,7 @@ public class RepositorioArtista implements RepositorioGenerico<Artista>, Loggabl
     @Override
     public void adicionar(Artista artista) {
         artista.setId(idAtual++); // adiciona um valor quando é criado o artista
-        logInfo("Artista Cadastrado com sucesso");
+        logInfo("Artista cadastrado com sucesso");
         artistas.add(artista);
 
     }
@@ -28,7 +28,14 @@ public class RepositorioArtista implements RepositorioGenerico<Artista>, Loggabl
     }
 
     @Override
-    public void editar(Artista entidade) {
+    public void editar(Artista artista) {
+        Artista atual = buscarPorId(artista.getId());
+        if (atual != null){
+            atual.setNome(artista.getNome());
+            atual.setGeneroMusical(artista.getGeneroMusical());
+            logInfo("Artista atualizado com sucesso");
+        }
+
 
     }
 
@@ -37,6 +44,7 @@ public class RepositorioArtista implements RepositorioGenerico<Artista>, Loggabl
         Artista artista = buscarPorId(id);
         if(artista != null){
             artistas.remove(artista);
+            logInfo("Artista excluido com sucesso");
         }
 
     }

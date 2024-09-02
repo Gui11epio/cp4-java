@@ -28,7 +28,14 @@ public class RepositorioMusica implements RepositorioGenerico<Musica>, Loggable<
     }
 
     @Override
-    public void editar(Musica entidade) {
+    public void editar(Musica musica) {
+        Musica atual = buscarPorId(musica.getId());
+        if(atual != null){
+            atual.setTitulo(musica.getTitulo());
+            atual.setDuracao(musica.getDuracao());
+            atual.setAlbum(musica.getAlbum());
+            logInfo("Artista atualizado com sucesso");
+        }
 
     }
 
@@ -37,6 +44,7 @@ public class RepositorioMusica implements RepositorioGenerico<Musica>, Loggable<
         Musica musica = buscarPorId(id);
         if(musica != null){
             musicas.remove(musica);
+            logInfo("Música excluida com sucesso");
         }
 
     }

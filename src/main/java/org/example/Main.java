@@ -32,7 +32,9 @@ public class Main {
             System.out.println("\t1 - Cadastro");
             System.out.println("\t2 - Mostrar");
             System.out.println("\t3 - Buscar");
-            System.out.println("\t4 - Sair");
+            System.out.println("\t4 - Excluir ");
+            System.out.println("\t5 - Atualizar");
+            System.out.println("\t6 - Sair");
             System.out.println("\t");
             System.out.println("Escolha uma das opções: ");
 
@@ -56,7 +58,7 @@ public class Main {
                                 System.out.println("==== CADASTRAR ARTISTA ====");
                                 System.out.println("Nome do artista: ");
                                 String nomeArtista = scanner.nextLine();
-                                System.out.println("Gênero Musical");
+                                System.out.println("Gênero Musical: ");
                                 String generoArtista = scanner.nextLine();
 
 
@@ -166,7 +168,7 @@ public class Main {
                                     System.out.println("\n- ID: " + artista1.getId()
                                             + "\n- Nome: " + artista1.getNome()
                                             + "\n- Gênero Musical: " + artista1.getGeneroMusical());
-                                System.out.println("\t");
+                                break;
 
 
                             case 2:
@@ -176,7 +178,8 @@ public class Main {
                                             + "\n- Título: " + album1.getTitulo()
                                             + "\n- Ano de Lançamento: " + album1.getAnoLancamento()
                                             + "\n- Artista: " + album1.getArtista());
-                                System.out.println("\t");
+                                break;
+
 
 
                             case 3:
@@ -186,7 +189,7 @@ public class Main {
                                             + "\n- Título: " + musica.getTitulo()
                                             + "\n- Duração: " + musica.getDuracao() + " minutos"
                                             + "\n- Álbum: " + musica.getAlbum());
-                                System.out.println("\t");
+                                break;
 
 
                             case 0:
@@ -221,11 +224,13 @@ public class Main {
                                 List<Artista> artistas = repositorioArtista.buscarPorGenero(genero);
                                 if(artistas.isEmpty()){
                                     System.out.println("Nenhum gênero encontrado");
+                                    break;
                                 }else{
                                     System.out.println("Artistas encontrados: ");
                                     for(Artista artista1: artistas){
                                         System.out.println("\n- ID: " + artista1.getId()
                                                 + "\n- Nome: " + artista1.getNome());
+                                        break;
                                     }
                                 }
                                 System.out.println("\t");
@@ -239,11 +244,13 @@ public class Main {
                                 List<Album> albums = repositorioAlbum.buscarPorAno(ano);
                                 if(albums.isEmpty()){
                                     System.out.println("Nenhum álbum encontrado para esse ano");
+                                    break;
                                 }else {
                                     System.out.println("==== Álbums encontrados ====");
                                     for (Album album1 : albums){
                                         System.out.println("\n- ID: " + album1.getId()
                                                 + "\n- Título: " + album1.getTitulo());
+                                        break;
                                     }
                                 }
                                 System.out.println("\t");
@@ -260,10 +267,89 @@ public class Main {
                     }
                     break;
 
-
                 case 4:
+                    while (true){
+                        System.out.println("==== EXCLUIR ====");
+                        System.out.println("\t1 - Excluir Artista");
+                        System.out.println("\t2 - Excluir Álbum");
+                        System.out.println("\t3 - Excluir Música");
+                        System.out.println("\t0 - Voltar");
+
+                        int escolhaExcluir = scanner.nextInt();
+                        scanner.nextLine();
+
+                        switch (escolhaExcluir){
+                            case 1:
+                                System.out.println("==== EXCLUIR ARTISTA ====");
+                                System.out.println("\t");
+                                for(Artista artista1 : repositorioArtista.exibir())
+                                    System.out.println("\n- ID: " + artista1.getId()
+                                            + "\n- Nome: " + artista1.getNome()
+                                            + "\n- Gênero Musical: " + artista1.getGeneroMusical());
+                                System.out.println("\t");
+
+                                System.out.println("ID do Artista que deseja excluir: ");
+                                int idArtista = scanner.nextInt();
+                                scanner.nextLine();
+
+                                Artista artista = repositorioArtista.buscarPorId(idArtista);
+                                if(artista != null){
+                                    repositorioArtista.excluir(artista.getId());
+                                    break;
+                                }else{
+                                    System.out.println("Nenhum artista encontrado");
+                                    break;
+                                }
+
+
+                            case 2:
+                                System.out.println("==== EXCLUIR ÁLBUM ====");
+                                for(Album album1 : repositorioAlbum.exibir())
+                                    System.out.println("\n- ID: " + album1.getId()
+                                            + "\n- Título: " + album1.getTitulo()
+                                            + "\n- Ano de Lançamento: " + album1.getAnoLancamento()
+                                            + "\n- Artista: " + album1.getArtista());
+                                System.out.println("\t");
+
+                                System.out.println("ID do Álbum que deseja excluir: ");
+                                int idAlbum = scanner.nextInt();
+                                scanner.nextLine();
+
+                                Album album = repositorioAlbum.buscarPorId(idAlbum);
+                                if(album != null){
+                                    repositorioAlbum.excluir(album.getId());
+                                    break;
+                                }else{
+                                    System.out.println("Nenhum Álbum encontrado");
+                                    break;
+                                }
+
+
+                            case 3:
+                                System.out.println();
+                            case 0:
+                                break;
+
+                            default:
+                                System.out.println("Opção Inválida. Tente Novamente");
+                        }
+                        if(escolhaExcluir == 0){
+                            break;
+                        }
+                    }
+                    break;
+
+                case 5:
+
+
+
+                case 6:
                     opcao = 4;
                     break;
+
+                default:
+                    System.out.println("Opção Inválida. Tente Novamente");
+
 
             }
         }

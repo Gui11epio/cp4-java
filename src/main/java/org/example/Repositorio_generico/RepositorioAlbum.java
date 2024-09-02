@@ -2,6 +2,7 @@ package org.example.Repositorio_generico;
 
 import org.example.Entidades.Album;
 import org.example.Entidades.Artista;
+import org.example.Entidades.Musica;
 import org.example.Log.Loggable;
 
 import java.util.ArrayList;
@@ -27,8 +28,14 @@ public class RepositorioAlbum implements RepositorioGenerico<Album>, Loggable<Al
     }
 
     @Override
-    public void editar(Album entidade) {
-
+    public void editar(Album album) {
+        Album atual = buscarPorId(album.getId());
+        if(atual != null){
+            atual.setTitulo(album.getTitulo());
+            atual.setAnoLancamento(album.getAnoLancamento());
+            atual.setArtista(album.getArtista());
+            logInfo("Álbum atualizado com sucesso");
+        }
     }
 
     @Override
@@ -36,6 +43,7 @@ public class RepositorioAlbum implements RepositorioGenerico<Album>, Loggable<Al
         Album album = buscarPorId(id);
         if(album != null){
             albums.remove(album);
+            logInfo("Música excluida com sucesso");
         }
 
     }
